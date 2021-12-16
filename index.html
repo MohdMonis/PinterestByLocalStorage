@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage project | Download, Save to Catagory options, add your own new catagory</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="nav">
+            <div id="navlft">
+                <h1 id="pinterestLogo">Pinterest</h1>
+                <a href="#">Home</a>
+            </div>
+            <div id="ctgry">
+                <div class="el">
+                    <label for="cat">
+                        Catagory
+                    </label>
+                    <i class="ri-arrow-down-s-fill"></i>
+                </div>
+                <div id="ctglstform">
+                    <div id="moreList"></div>
+                    <button id="cartview">Open</button>
+                </div>
+
+            </div>
+        </div>
+        <div id="svmdl">
+            <div id="askingform"></div>
+            <i id='closesvmdl' class="ri-close-circle-line"></i>
+            <input type="text" name="" id="addnewctg" placeholder="Enter Catagory Name">
+            <button id="disview">Add</button>
+        </div>
+        <div id="maindiv">
+            <div class="pages" id="mainlist"></div>
+            <div class="pages" id="ctgrylist">
+                <h1><span id="catheadname"></span><span id="catspnname"></span></h1>
+                <div id="slctedctgrylst">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

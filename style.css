@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'Brush Script Std';
+    src: url(./fonts/BrushScriptStd.woff);
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(./fonts/Montserrat-Black.woff);
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(./fonts/Montserrat-Bold.woff);
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(./fonts/Montserrat-Light.woff);
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(./fonts/Montserrat-Medium.woff);
+    font-style: normal;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat";
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.ri-delete-bin-6-line {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: rgba(184, 184, 184, 0.5);
+}
+
+
+/* main starts */
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 1px;
+}
+
+
+/* nav starts */
+
+#nav {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 70px;
+    z-index: 1000;
+}
+
+#pinterestLogo {
+    color: tomato;
+    font-family: 'Brush Script Std';
+}
+
+#pinterestLogo::first-letter {
+    color: white;
+    background-color: tomato;
+    padding: 6px 6px 0px 5px;
+    border-radius: 50%;
+}
+
+#navlft {
+    display: flex;
+    align-items: center;
+}
+
+#navlft a {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    text-shadow: 2px 4px 6px grey;
+    margin-left: 100px;
+}
+
+
+/* catagery */
+
+#ctgry {
+    display: flex;
+    flex-direction: column;
+    /* background-color: burlywood; */
+}
+
+.el {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 4px 6px grey;
+}
+
+#cartview,
+#disview {
+    /* display: none; */
+    filter: drop-shadow(2px 2px 6px rgb(180, 180, 180));
+}
+
+#ctgry>.el {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#ctglstform {
+    position: absolute;
+    top: 80%;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#moreList {
+    text-align: right;
+    /* background-color: rgb(223, 223, 223); */
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+#moreList .el {
+    padding: 4px 2px;
+    /* background-color: cornsilk; */
+    margin: 4px 0;
+}
+
+
+/* main section for displaying images */
+
+#maindiv {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 10px 70px;
+    background-color: tomato;
+    z-index: 1;
+}
+
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(216, 191, 216, 0.233);
+}
+
+.pages h1 {
+    margin: 10px 20px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.pages #catheadname,
+.pages #catspnname {
+    display: block;
+    text-align: left;
+}
+
+.pages #catspnname {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+#slctedctgrylst {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+#slctedctgrylst .pic {
+    pointer-events: initial;
+}
+
+
+/* #mainlist {} */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* img properties */
+
+.pic {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px 20px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overimg {
+    opacity: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.overimg:hover {
+    opacity: 1;
+}
+
+.ri-download-line {
+    padding: 4px;
+    margin-left: 10px;
+    background-color: grey;
+    border-radius: 4px;
+}
+
+.overimg button {
+    padding: 2px 4px;
+    border-radius: 100px;
+    border-width: 1px;
+}
+
+
+/*  */
+
+
+/*  */
+
+#svmdl {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+#svmdl .ri-delete-bin-6-line {
+    display: none;
+}
+
+#askingform {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.438);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+#svmdl i.ri-close-circle-line {
+    font-size: 20px;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+#svmdl input,
+#svmdl button {
+    border-radius: 100px;
+    padding: 4px 10px;
+    border-width: 1px;
+}
+
+@media(max-width:500px) {
+    #nav {
+        width: 95%;
+        height: 60px;
+    }
+    #pinterestLogo {
+        font-size: 20px;
+    }
+    #nav a {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    #ctgry>.el {
+        position: initial;
+    }
+    #maindiv {
+        top: 60px;
+        /* padding: 8px 18px; */
+        padding: 10px;
+        height: calc(100% - 60px);
+    }
+    .pages {
+        border-radius: 10px;
+        width: inherit;
+        padding: 10px;
+    }
+    .pic {
+        width: 100px;
+        height: 150px;
+        margin: 0 10px 10px 0;
+    }
+    button,
+    i {
+        font-size: 12px;
+    }
+}

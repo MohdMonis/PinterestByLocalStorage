@@ -39,7 +39,7 @@ var CtgArray = []
 // function to set or update the local storage.
 function setlocal(val) {
     if (localStorage.getItem('lsArray') === null) {
-        localStorage.setItem('lsArray', JSON.stringify(val));
+        localStorage.setItem('lsArray', JSON.stringify(CtgArray));
     } else {
         localStorage.setItem('lsArray', JSON.stringify(val));
     }
